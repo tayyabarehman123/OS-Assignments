@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learn Linux, Shell Scripting, and System Programming</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    section {
+      background: white;
+      padding: 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2, h3 {
+      color: #34495e;
+    }
+    p, li {
+      color: #555;
+    }
+    code, pre {
+      background: #eef;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🚀 Linux, Shell Scripting & System Programming Guide</h1>
+  <h2>Made By: <strong>Tayyaba Rehman</strong> </h2>
+  <p>Master Linux commands, Shell scripting, and System programming fundamentals!</p>
+</header>
+
+<sextion>
+  <h2>🖥️ Linux</h2>
+  <ul>
+    <p>Linux is an open-source operating system just like Windows or macOS but it's free and customizable.
+        <br>It acts as a bridge between your computer's hardware (like CPU, RAM, hard drive) and the software (like applications and programs).
+                    
+           <br>When you turn on a Linux machine:
+                    
+           <br>Linux controls hardware
+                    
+           <br>Linux manages files and processes
+                    
+           <br>Linux provides a platform to run programs</p>
+        </ul>
+    </section>
+
+    
+<section>
+    <h2>🌐 Kernal</h2>
+    <ul>
+<p>The kernel is the core part of an operating system that manages communication between hardware and software.
+    <br>It controls processes, memory, devices, and file systems to keep everything running smoothly.</p>
+</ul>
+</section>
+<section>
+  <h2>🖥️ Terminal Basics</h2>
+  <ul>
+    <li><code>date</code> — Display current date and time.</li>
+    <li><code>echo "Hello World"</code> — Print text to screen.</li>
+    <li><code>clear</code> — Clear the terminal screen.</li>
+    <li><code>whoami</code> — Show current username.</li>
+    <li><code>who</code> — See who is logged into the system.</li>
+    <li><code>sort filename.txt</code> — Sort the lines in a file.</li>
+    <li><code>clear</code> — Clears the terminal.</li>
+  </ul>
+</section>
+
+<section>
+    <h2>🖥️ Navigating Directories</h2>
+    <ul>
+      <li><code>cd</code> — Move to the home directory from the current directory.</li>
+      <li><code>cd /</code> — Move to the root directory (frpm top level directory) .</li>
+      <li><code>cd ..</code> — Move one step(one directory) backward.</li>
+      <li><code>cd dir-name</code> — Move to a specific directory named in the command.</li>
+      <li><code>ls</code> — Show all files and folders in the current directory.</li>
+      <li><code>ls -l</code> — Show detailed information (permissions, size, date) about files and folders.</li>
+      <li><code>ls -r</code> — List files and folders in the reverse order.</li>
+      <li><code>ls -a</code> — Show all hidden and unhidden files.</li>
+      <li><code>pwd</code> — Print the full path of your current working directory.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📜 File Management </h2>
+    <ul>
+    <li><code>touch filename, pico filename or nano filename</code>
+        <li><code>filename</code> — Create a new empty file .</li>
+        <li><code>mkdir foldername</code> — Make a new directory (folder).</li>
+        <li><code>cp source destination</code> — Copy a file or folder.</li>
+        <li><code>mv source destination</code> — Rename or move a file or folder.</li>
+        <li><code>rm filename</code> — Delete a file.</li>
+        <li><code>rmdir dir-name</code> — Delete an empty directory (only if no files or folders inside).</li>
+        <li><code>rm -r dir-name</code> — Delete a directory and everything inside it (files and folders).</li>   
+      </ul>
+    </section> 
+
+    <section>
+        <h2>📜 Viewing File Content </h2>
+        <ul>
+            <li><code>cat filename</code> — Show all content of a file.</li>
+        </ul>
+    </section> 
+
+    <section>
+        <h2>🛠️ Package Management </h2>
+        <ul>
+            <li><code>sudo apt update</code> — Update the list of available packages (Ubuntu).</li>
+            <li><code>sudo apt install package-name</code> — Install a new software package.</li>  
+        </ul>
+    </section> 
+
+<section>
+  <h2>🔗 Stream, Redirection & Pipes</h2>
+  <p><strong>Streams:</strong> <br>In computers, a stream is just the flow of data. When data comes into the computer (input), or goes out from it (output), it's called a stream.
+<br><br> Linux Commands use three types of streams:
+<br><br><strong>Standard Input (stdin):</strong> Input, usually from keyboard.
+<br><strong>Standard Output (stdout):</strong> Output to screen (results).
+<br><strong>Standard Error (stderr):</strong> Error messages sgow on screen.</p>
+
+<p><strong>I/O Redirection:</strong> <br>Redirection means changing where input comes from or where output goes. Normally, input comes from keyboard and output goes to<br> the screen, but with redirection, we can change this.
+    <br><br><strong>Redirection Operators:</strong></pr>
+       <br> <li><code>></code> — Send output to a file (overwrite it if exists).</li>
+        <li><code>>></code> — Send output to the end of a file (append) .</li>
+        <li><code><<n></code> — Take input from a file instead of keyboard.</li>
+        <li><code><<</code> — Used mostly in shell scripting for input.</li>
+        <li><code>|</code> — Send output of one command as input to another command.</li>
+        <br>
+
+        <p><strong>Pipes:</strong> <br>Send output of one command into another command. <br><br> Format:<code>CommandA | CommandB</code></p>
+  <pre><code>cat file.txt | sort</code></pre>
+  <p>This sorts the contents of <code>file.txt</code>.</p>
+</section>
+
+<section>
+    <h2>⚙️ Process Management</h2>
+    <ul>
+        <li><code>ps</code> — Show currently running processes.</li>
+        <li><code>bg</code> — Resumes a suspended job in the background.</li>
+        <li><code>fg</code> — Brings a background job to the foreground.</li>
+        <li><code>kill PID</code> — Terminate a process using it;s Process ID.</li>
+    </ul>
+</section> 
+
+<section>
+    <h2>🛠️ Permissions </h2>
+    <ul>
+        <li><code>chmod</code> — Change permissions (read, write, execute) of a file.</li>
+        <li><code>Read (r)</code> — This permission in a directory means you can use the ls command to the filenames.</li>
+        <li><code>Write (w)</code> — This permission in a directory means you can add files from the directory.</li>
+        <li><code>Execute (x)</code> — This permission in a directory means you can use the cd command to change the directory.</li>
+    </ul>
+</section> 
+
+<section>
+  <h2>🖊️ uname</h2>
+  <ul>
+    <p>Displays a system information like OS name and Kernal version.</p>
+    <li><code>-n</code> — Print the network node hostname.</li>
+    <li><code>-r</code> — Print the Kernal release.</li>
+    <li><code>-v</code> — Print the Kernal version.</li>
+    <li><code>-m</code> — Print the machine hardware name.</li>
+    <li><code>-p</code> — Print the processor type.</li>
+    <li><code>-i</code> — Print the hardware platform.</li>
+    <li><code>-o</code> — Print the operating system.</li>
+    <li><code>-a</code> — Print all available system.</li>
+</ul>
+</section> 
+
+<section>
+    <h2>🔀 sort</h2>
+    <ul>
+      <p>Sort lines in a file alphabetically. Output shows on terminal by default but can be redirected to a file.</p>
+      <li><code>-b</code> — Ignore leading blanks.</li>
+      <li><code>-r</code> — Sort in reverse order.</li>
+      <li><code>-f</code> — Ignore case difference (A=a).</li>
+      <li><code>-k</code> — Sort based on a specific column.</li>
+      <li><code>-n</code> — Sort numbers by their arithmetic values.</li>
+  </ul>
+  </section> 
+  
+  <section>
+    <h2>🛠️ GCC Compilation </h2>
+    <ul>
+        <p>GCC (GNU Compiler Collection) is a compiler system produced by the GNU Project. <br>Originally it was the GNU C Compiler, later extended to compile C++, Objective-C, Java, FORTRAN, etc.
+        </p>
+        <li><code>gcc --version</code> — Check installed GCC version.</li>
+        <li><code>sudo apt install gcc</code> — Used to install GCC version if not install already.</li>
+        <li><code>.c</code> — Save C programs file with the .c extension (e.g., red.c).</li>
+        </ul>
+</section> 
+
+<section>
+  <h2>📜 Bash Scripting Essentials</h2>
+
+  <h3>🛠️ For Loop</h3>
+  <pre><code>for i in 1 2 3
+do
+  echo "Item $i"
+done</code></pre>
+
+  <h3>🔁 While Loop</h3>
+  <pre><code>count=1
+while [ $count -le 3 ]
+do
+  echo "Number $count"
+  ((count++))
+done</code></pre>
+
+  <h3>🔀 Case Statement</h3>
+  <pre><code>read -p "Choose a number: " num
+case $num in
+  1) echo "One";;
+  2) echo "Two";;
+  *) echo "Other";;
+esac</code></pre>
+
+  <h3>🧮 Arithmetic Operations</h3>
+  <p><strong>Addition, subtraction, multiplication, division in Bash:</strong></p>
+  <pre><code>a=10
+b=5
+echo "Sum = $((a+b))"
+echo "Subtract = $((a-b))"
+echo "Product = $((a/*b))"
+echo "Division = $((a/b))"</code></pre>
+
+  <h3>🔧 Functions</h3>
+  <pre><code>greet() {
+  echo "Welcome, $1!"
+}
+greet "User"</code></pre>
+
+</section>
+
+<section>
+  <h2>🌐 Shell Types</h2>
+  <ul>
+    <li><strong>System Shell:</strong> Provided by OS (e.g., /bin/sh).</li>
+    <li><strong>User Shell:</strong> Chosen by user (e.g., bash, zsh).</li>
+  </ul>
+</section>
+
+<section>
+  <h2>🔒 Predefined Shell Variables</h2>
+  <ul>
+    <li><code>$HOME</code> — Home directory path.</li>
+    <li><code>$USER</code> — Current user.</li>
+    <li><code>$PWD</code> — Current working directory.</li>
+    <li><code>$SHELL</code> — Shell program path.</li>
+    <li><code>$PATH</code> — Search path for executable files.</li>
+  
+    <h2>🔢 Positional Parameters</h2>
+    <pre><code>echo "First arg: $1"
+  echo "Second arg: $2"</code></pre>
+  </ul>
+</section>
+
+<section>
+  <h2>🖊️ User-Defined Variables</h2>
+  <p>Define your own variable:</p>
+  <pre><code>myvar="Welcome"
+echo "$myvar to Linux!"</code></pre>
+</section>
+
+<section>
+  <h2>⚙️ System Programming (C Language)</h2>
+
+  <h3>🔹 system() Function</h3>
+  <p>Runs a shell command inside a C program.</p>
+  <pre><code>#include &lt;stdlib.h&gt;
+int main() {
+    system("ls -l");
+    return 0;
+}</code></pre>
+
+  <h3>🔹 fork() - Create a New Process</h3>
+  <p>Creates a child process.</p>
+  <pre><code>#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+int main() {
+    fork();
+    printf("Hello Process\n");
+    return 0;
+}</code></pre>
+
+  <h3>🔹 exec() - Replace Current Process</h3>
+  <p>Runs a different program inside current process.</p>
+  <pre><code>#include &lt;unistd.h&gt;
+int main() {
+    execl("/bin/ls", "ls", "-l", NULL);
+    return 0;
+}</code></pre>
+
+  <h3>🔹 wait() - Wait for Child</h3>
+  <p>Parent waits for child process to finish.</p>
+  <pre><code>#include &lt;sys/wait.h&gt;
+#include &lt;unistd.h&gt;
+int main() {
+    fork();
+    wait(NULL);
+    return 0;
+}</code></pre>
+
+  <h3>🔹 exit() - End a Program</h3>
+  <pre><code>#include &lt;stdlib.h&gt;
+int main() {
+    exit(0);
+}</code></pre>
+
+  <h3>🔹 getpid() and getppid()</h3>
+  <p><code>getpid()</code> — Get current process ID, <code>getppid()</code> — Get parent process ID.</p>
+  <pre><code>#include &lt;unistd.h&gt;
+#include &lt;stdio.h&gt;
+int main() {
+    printf("My PID: %d\n", getpid());
+    printf("My Parent PID: %d\n", getppid());
+    return 0;
+}</code></pre>
+
+</section>
+
+<section>
+  <h2>📚 Getting Help</h2>
+  <ul>
+    <li><code>man command</code> — Read manual page.</li>
+    <li><code>command --help</code> — Quick help options.</li>
+  </ul>
+</section>
+
+<footer>
+  🎯 Congratulations! You're now ready to master Linux, Shell scripting, and basic System programming!
+</footer>
+
+</body>
+</html>
+
+
